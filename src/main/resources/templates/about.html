@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Thymeleaf practical</title>
+</head>
+<body>
+	<h1>Working fine</h1>
+	<h1 th:text="${name}"></h1>
+	<h2>
+		Name of the owner is <span th:text="${name}"></span>
+	</h2>
+	<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+	<h1 th:text="${#strings.toLowerCase(name)}"></h1>
+	<h2>
+		Name of the lenght is <span th:text="${#strings.length(name)}"></span>
+	</h2>
+	<div th:with="a=5,b=6">
+		<h2>
+			display the value a <span th:text="${a}"></span>
+		</h2>
+		<h2>
+			display the value b <span th:text="${b}"></span>
+		</h2>
+		<h2>
+			Addition of a and b <span th:text="${a+b}"></span>
+		</h2>
+		<h3 th:text="'sum of ' +${a}+' and '+${b} +' is '+${a+b}"></h3>
+
+	</div>
+</body>
+</html>
